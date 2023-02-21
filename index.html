@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mike´s Shop</title>
+  <!--=============== FAVICON ===============-->
+  <link rel="shortcut icon" href="assets/img/Logo-M.PNG" type="image/x-icon">
+  <!--=============== BOXICONS ===============-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!--==================== LOADER ====================-->
+  <div class="load" id="load">
+    <svg xmlns="" viewBox="0 0 48.92 56.48" class="load__gif">
+      <title></title>
+      <g>
+        <g>
+          <path
+            d="">
+          </path>
+          <path
+            d="">
+          </path>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <!--==================== HEADER ====================-->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="nav__logo-icon">
+          <title>Myke's shop Logo</title>
+          <link rel="stylesheet" href="">
+        </svg> Shop
+      </a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link active-link">Inicio</a>
+          </li>
+          <li class="nav__item">
+            <a href="#products" class="nav__link">Productos</a>
+          </li>
+        </ul>
+
+        <div class="nav__close" id="nav-close">
+          <i class='bx bx-x'></i>
+        </div>
+      </div>
+
+      <div class="nav__btns">
+        <!-- Theme change button -->
+        <i class='bx bx-moon change-theme' id="theme-button"></i>
+
+        <div class="nav__shop" id="cart-shop">
+          <i class='bx bx-shopping-bag'></i>
+          <span id="cart-count" class="count"></span>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class='bx bx-grid-alt'></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--==================== CART ====================-->
+  <div class="cart" id="cart">
+    <i class='bx bx-x cart__close' id="cart-close"></i>
+
+    <h2 class="cart__title-center"><i class='bx bx-cart'></i> Carrito</h2>
+
+    <div id="cart__container" class="cart__container">
+
+      <article class="cart__card">
+        <div class="cart__box">
+          <img src="assets/img/card1.PNG" alt="Cards" class="cart__img">
+        </div>
+
+        <div class="cart__details">
+          <h3 class="cart__title">card <span class="cart__price">$400.00</span></h3>
+
+          <div class="cart__amount">
+            <div class="cart__amount-content">
+              <span class="cart__amount-box removeToCart" data-id="1">
+                <i class="bx bx-minus"></i>
+              </span>
+
+              <span class="cart__amount-number">1</span>
+
+              <span class="cart__amount-box addToCart" data-id="1">
+                <i class="bx bx-plus"></i>
+              </span>
+            </div>
+
+            <i class="bx bx-trash-alt cart__amount-trash deleteToCart" data-id="1"></i>
+          </div>
+
+          <span class="cart__subtotal">
+            <span class="cart__stock">Quedan 4 unidades</span>
+            <span class="cart__subtotal-price">$400.00</span>
+          </span>
+        </div>
+      </article>
+
+      <article class="cart__card">
+        <div class="cart__box">
+          <img src="assets/img/pack3.PNG" alt="Cards" class="cart__img">
+        </div>
+
+        <div class="cart__details">
+          <h3 class="cart__title">Card <span class="cart__price">$600.00</span></h3>
+
+          <div class="cart__amount">
+            <div class="cart__amount-content">
+              <span class="cart__amount-box removeToCart" data-id="2">
+                <i class="bx bx-minus"></i>
+              </span>
+
+              <span class="cart__amount-number">1</span>
+
+              <span class="cart__amount-box addToCart" data-id="2">
+                <i class="bx bx-plus"></i>
+              </span>
+            </div>
+
+            <i class="bx bx-trash-alt cart__amount-trash deleteToCart" data-id="2"></i>
+          </div>
+
+          <span class="cart__subtotal">
+            <span class="cart__stock">Quedan 4 unidades</span>
+            <span class="cart__subtotal-price">$600.00</span>
+          </span>
+        </div>
+      </article>
+
+      <article class="cart__card">
+        <div class="cart__box">
+          <img src="assets/img/card3.PNG" alt="Cards" class="cart__img">
+        </div>
+
+        <div class="cart__details">
+          <h3 class="cart__title">Card <span class="cart__price">$500.00</span></h3>
+
+          <div class="cart__amount">
+            <div class="cart__amount-content">
+              <span class="cart__amount-box removeToCart" data-id="3">
+                <i class="bx bx-minus"></i>
+              </span>
+
+              <span class="cart__amount-number">1</span>
+
+              <span class="cart__amount-box addToCart" data-id="3">
+                <i class="bx bx-plus"></i>
+              </span>
+            </div>
+
+            <i class="bx bx-trash-alt cart__amount-trash deleteToCart" data-id="3"></i>
+          </div>
+
+          <span class="cart__subtotal">
+            <span class="cart__stock">Quedan 4 unidades</span>
+            <span class="cart__subtotal-price">$500.00</span>
+          </span>
+        </div>
+      </article>
+
+      <article class="cart__card">
+        <div class="cart__box">
+          <img src="assets/img/pack1.PNG" alt="Packs" class="cart__img">
+        </div>
+
+        <div class="cart__details">
+          <h3 class="cart__title">Pack <span class="cart__price">$1500.00</span></h3>
+
+          <div class="cart__amount">
+            <div class="cart__amount-content">
+              <span class="cart__amount-box removeToCart" data-id="4">
+                <i class="bx bx-minus"></i>
+              </span>
+
+              <span class="cart__amount-number">1</span>
+
+              <span class="cart__amount-box addToCart" data-id="4">
+                <i class="bx bx-plus"></i>
+              </span>
+            </div>
+
+            <i class="bx bx-trash-alt cart__amount-trash deleteToCart" data-id="4"></i>
+          </div>
+
+          <span class="cart__subtotal">
+            <span class="cart__stock">Quedan 4 unidades</span>
+            <span class="cart__subtotal-price">$1500.00</span>
+          </span>
+        </div>
+      </article>
+
+      <article class="cart__card">
+        <div class="cart__box">
+          <img src="assets/img/pack 2.PNG" alt="Packs" class="cart__img">
+        </div>
+
+        <div class="cart__details">
+          <h3 class="cart__title">Pack <span class="cart__price">$1500.00</span></h3>
+
+          <div class="cart__amount">
+            <div class="cart__amount-content">
+              <span class="cart__amount-box removeToCart" data-id="5">
+                <i class="bx bx-minus"></i>
+              </span>
+
+              <span class="cart__amount-number">1</span>
+
+              <span class="cart__amount-box addToCart" data-id="5">
+                <i class="bx bx-plus"></i>
+              </span>
+            </div>
+
+            <i class="bx bx-trash-alt cart__amount-trash deleteToCart" data-id="5"></i>
+          </div>
+
+          <span class="cart__subtotal">
+            <span class="cart__stock">Quedan 4 unidades</span>
+            <span class="cart__subtotal-price">$1500.00</span>
+          </span>
+        </div>
+      </article>
+
+      <article class="cart__card">
+        <div class="cart__box">
+          <img src="assets/img/pack3.PNG" alt="Packs" class="cart__img">
+        </div>
+
+        <div class="cart__details">
+          <h3 class="cart__title">Pack <span class="cart__price">$2500.00</span></h3>
+
+          <div class="cart__amount">
+            <div class="cart__amount-content">
+              <span class="cart__amount-box removeToCart" data-id="6">
+                <i class="bx bx-minus"></i>
+              </span>
+
+              <span class="cart__amount-number">1</span>
+
+              <span class="cart__amount-box addToCart" data-id="6">
+                <i class="bx bx-plus"></i>
+              </span>
+            </div>
+
+            <i class="bx bx-trash-alt cart__amount-trash deleteToCart" data-id="6"></i>
+          </div>
+
+          <span class="cart__subtotal">
+            <span class="cart__stock">Quedan 4 unidades</span>
+            <span class="cart__subtotal-price">$2500.00</span>
+          </span>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="cart__prices">
+      <span class="cart__prices-item"><span id="items-count"></span> Unidades</span>
+      <span class="cart__prices-total" id="cart-total"></span>
+    </div>
+
+    <div id="action-buttons" class="cart__checkout">
+      <button class="button cart__btn" id="cart-checkout" disabled><i class='bx bxs-check-shield'></i> Comprar</button>
+      <button class="button cart__btn" id="cart-empty" disabled><i class='bx bx-cart-alt'></i> Limpiar</button>
+    </div>
+
+  </div>
+
+  <!--==================== MAIN ====================-->
+  <main class="main">
+    <!--==================== HOME ====================-->
+    <section class="home" id="home">
+      <div class="home__container container grid">
+        <div class="home__img-bg">
+          <img src="assets/img/pack3.PNG" alt="" class="home__img">
+        </div>
+
+        <div class="home__data">
+          <h1 class="home__title">Nuevo Pack  <br> Pokemon "SUN & MOON" 'Team up'</h1>
+          <p class="home__description">
+            Nueno Pack de Pokemon TCG colección: "SUN & MOON" 'Team up' <br> cada pack contiene 10 sobres con 10 cartas cada sobre
+          </p>
+          <span class="home__price">$2500.00</span>
+
+          <div class="home__btns">
+            <a href="#" class="button button--transparent button--small">
+              Descubrir
+            </a>
+
+            <button class="button home__button">AÑADIR AL CARRITO</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== PRODUCTS ====================-->
+    <section class="products" id="products">
+      <div class="products__container container">
+        <ul class="products__filters">
+          <li class="products__item products__line" data-filter="all">
+            <h3 class="products__title">
+              Mostrar todo
+            </h3>
+            <span class="products__stock">
+              Mostrar todos los productos
+            </span>
+          </li>
+
+          <li class="products__item products__line active-product" data-filter=".cards">
+            <h3 class="products__title">
+              Cards
+            </h3>
+            <span class="products__stock">
+              3 productos
+            </span>
+          </li>
+
+          <li class="products__item products__line" data-filter=".packs">
+            <h3 class="products__title">
+              Packs
+            </h3>
+            <span class="products__stock">
+              3 productos
+            </span>
+          </li>
+        </ul>
+
+        <div class="products__content grid" id="products__content">
+
+          <article class="products__card cards">
+            <div class="products__shape">
+              <img src="assets/img/card1.PNG" alt="Cards" class="products__img">
+            </div>
+
+            <div class="products__data">
+              <h2 class="products__name">Radiant Charizard</h2>
+              <div class="">
+                <h3 class="products__price">$400.00</h3>
+                <span class="products__quantity">Quedan solo 4 unidades</span>
+              </div>
+              <button type="button" class="button products__button addToCart" data-id="1">
+                <i class="bx bx-plus"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="products__card cards">
+            <div class="products__shape">
+              <img src="assets/img/card2.PNG" alt="Cards" class="products__img">
+            </div>
+
+            <div class="products__data">
+              <h2 class="products__name">Arceus & Dialga & Palkia Gx</h2>
+              <div class="">
+                <h3 class="products__price">$600.00</h3>
+                <span class="products__quantity">Quedan solo 4 unidades</span>
+              </div>
+              <button type="button" class="button products__button addToCart" data-id="2">
+                <i class="bx bx-plus"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="products__card cards">
+            <div class="products__shape">
+              <img src="assets/img/card3.PNG" alt="Cards" class="products__img">
+            </div>
+
+            <div class="products__data">
+              <h2 class="products__name">Umbreon Vmax</h2>
+              <div class="">
+                <h3 class="products__price">$500.00</h3>
+                <span class="products__quantity">Quedan solo 4 unidades</span>
+              </div>
+              <button type="button" class="button products__button addToCart" data-id="3">
+                <i class="bx bx-plus"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="products__card packs">
+            <div class="products__shape">
+              <img src="assets/img/pack1.PNG" alt="Cards" class="products__img">
+            </div>
+
+            <div class="products__data">
+              <h2 class="products__name">Pack Pokemon 'ANCIENT ORIGINS'</h2>
+              <div class="">
+                <h3 class="products__price">$1500.00</h3>
+                <span class="products__quantity">Quedan solo 4 unidades</span>
+              </div>
+              <button type="button" class="button products__button addToCart" data-id="4">
+                <i class="bx bx-plus"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="products__card packs">
+            <div class="products__shape">
+              <img src="assets/img/pack 2.PNG" alt="Cards" class="products__img">
+            </div>
+
+            <div class="products__data">
+              <h2 class="products__name">Pack Pokemon 'FURIOUS FIRST'</h2>
+              <div class="">
+                <h3 class="products__price">$1500.00</h3>
+                <span class="products__quantity">Quedan solo 4 unidades</span>
+              </div>
+              <button type="button" class="button products__button addToCart" data-id="5">
+                <i class="bx bx-plus"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="products__card packs">
+            <div class="products__shape">
+              <img src="assets/img/pack3.PNG" alt="Cards" class="products__img">
+            </div>
+
+            <div class="products__data">
+              <h2 class="products__name">Pack Pokemon <br> 'TEAM UP'</h2>
+              <div class="">
+                <h3 class="products__price">$2500.00</h3>
+                <span class="products__quantity">Quedan solo 4 unidades</span>
+              </div>
+              <button type="button" class="button products__button addToCart" data-id="6">
+                <i class="bx bx-plus"></i>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!--==================== FOOTER ====================-->
+  <footer class="footer section">
+    <div class="footer__container container grid">
+      <div class="footer__content">
+        <h3 class="footer__title">Encuentranos</h3>
+
+        <ul class="footer__list">
+          <li>CDMX - México</li>
+        </ul>
+      </div>
+      <div class="footer__content">
+        <h3 class="footer__title">Sobre nosotros</h3>
+
+        <ul class="footer__links">
+          <li>
+            <a href="#" class="footer__link">Centro de soporte</a>
+          </li>
+          <li>
+            <a href="#" class="footer__link">Apoyo al cliente</a>
+          </li>
+          <li>
+            <a href="#" class="footer__link">Sobre nosotros</a>
+          </li>
+          <li>
+            <a href="#" class="footer__link">Derechos de autor</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">Producto</h3>
+
+        <ul class="footer__links">
+          <li>
+            <a href="#" class="footer__link">Cartas</a>
+          </li>
+          <li>
+            <a href="#" class="footer__link">Packs</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">Social</h3>
+
+        <ul class="footer__social">
+          <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+            <i class='bx bxl-facebook'></i>
+          </a>
+
+          <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+            <i class='bx bxl-twitter'></i>
+          </a>
+
+          <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+            <i class='bx bxl-instagram'></i>
+          </a>
+        </ul>
+      </div>
+    </div>
+
+    <span class="footer__copy">&#169; Myke´s SHOP. Todos los derechos reservados</span>
+  </footer>
+
+  <!--=============== SCROLL UP ===============-->
+  <a href="#" class="scrollup" id="scroll-up">
+    <i class='bx bx-up-arrow-alt scrollup__icon'></i>
+  </a>
+
+  <!--=============== MIXITUP FILTER ===============-->
+  <script src="assets/js/helpers/mixitup.min.js"></script>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="assets/js/main.js" type="module"></script>
+  <script src="assets/js/cart.js"></script>
+</body>
+
+</html>
